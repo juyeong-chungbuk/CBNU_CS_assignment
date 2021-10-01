@@ -1,0 +1,12 @@
+﻿  문제6.c
+  문제7.c
+c:\users\happy\source\repos\응컴 연결리스트 과제\응컴 연결리스트 과제\문제7.c(38): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 'scanf' 선언을 참조하십시오.
+c:\users\happy\source\repos\응컴 연결리스트 과제\응컴 연결리스트 과제\문제7.c(69): warning C4133: '=': 'MOVIE *'과(와) 'MOVIE *' 사이의 형식이 호환되지 않습니다.
+c:\users\happy\source\repos\응컴 연결리스트 과제\응컴 연결리스트 과제\문제7.c(61): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 'scanf' 선언을 참조하십시오.
+c:\users\happy\source\repos\응컴 연결리스트 과제\응컴 연결리스트 과제\문제7.c(63): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 'scanf' 선언을 참조하십시오.
+c:\users\happy\source\repos\응컴 연결리스트 과제\응컴 연결리스트 과제\문제7.c(83): warning C4133: '=': 'MOVIE *'과(와) 'MOVIE *' 사이의 형식이 호환되지 않습니다.
+  코드를 생성하고 있습니다...
+  응컴 연결리스트 과제.vcxproj -> C:\Users\happy\source\repos\응컴 연결리스트 과제\Debug\응컴 연결리스트 과제.exe
