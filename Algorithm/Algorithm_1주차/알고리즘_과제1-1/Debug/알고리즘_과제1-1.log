@@ -1,0 +1,11 @@
+﻿  예제2.c
+  예제3.c
+c:\users\happy\source\repos\알고리즘_과제1-1\알고리즘_과제1-1\예제3.c(14): warning C4013: 'malloc'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+c:\users\happy\source\repos\알고리즘_과제1-1\알고리즘_과제1-1\예제3.c(14): warning C4047: '=': 'int *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+c:\users\happy\source\repos\알고리즘_과제1-1\알고리즘_과제1-1\예제3.c(18): warning C4013: 'Array'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+c:\users\happy\source\repos\알고리즘_과제1-1\알고리즘_과제1-1\예제3.c(12): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 'scanf' 선언을 참조하십시오.
+c:\users\happy\source\repos\알고리즘_과제1-1\알고리즘_과제1-1\예제3.c(48): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 'scanf' 선언을 참조하십시오.
+  코드를 생성하고 있습니다...
+  알고리즘_과제1-1.vcxproj -> C:\Users\happy\source\repos\알고리즘_과제1-1\Debug\알고리즘_과제1-1.exe
