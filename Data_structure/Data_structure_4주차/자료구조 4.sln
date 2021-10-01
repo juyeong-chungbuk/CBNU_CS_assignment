@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "자료구조 4", "자료구조 4\자료구조 4.vcxproj", "{9B4539C7-AE1E-4205-9764-B9F4B08E8FAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B4539C7-AE1E-4205-9764-B9F4B08E8FAF}.Debug|x64.ActiveCfg = Debug|x64
+		{9B4539C7-AE1E-4205-9764-B9F4B08E8FAF}.Debug|x64.Build.0 = Debug|x64
+		{9B4539C7-AE1E-4205-9764-B9F4B08E8FAF}.Debug|x86.ActiveCfg = Debug|Win32
+		{9B4539C7-AE1E-4205-9764-B9F4B08E8FAF}.Debug|x86.Build.0 = Debug|Win32
+		{9B4539C7-AE1E-4205-9764-B9F4B08E8FAF}.Release|x64.ActiveCfg = Release|x64
+		{9B4539C7-AE1E-4205-9764-B9F4B08E8FAF}.Release|x64.Build.0 = Release|x64
+		{9B4539C7-AE1E-4205-9764-B9F4B08E8FAF}.Release|x86.ActiveCfg = Release|Win32
+		{9B4539C7-AE1E-4205-9764-B9F4B08E8FAF}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D46A58DC-6F7D-43D9-8DD9-E6AFF2A4D7E9}
+	EndGlobalSection
+EndGlobal
