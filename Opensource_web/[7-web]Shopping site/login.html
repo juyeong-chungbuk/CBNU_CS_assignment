@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./css/login.css" rel="stylesheet" type="text/css">
+        <title>Login</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+            crossorigin="anonymous">
+        <style>
+            body {
+                background-image: url("../img/grocery-img.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                width: 100%;
+                height: 1000px;
+            }
+        </style>
+        <script src="./js/login.js"></script>
+    </head>
+    <body>
+        <h1
+            style="color: white; font-size: 60px; position: absolute; top: 10%; left: 10%;">
+            <b>Happy<br>Shopping</b>
+        </h1>
+        <form action="./home.html" name="Myform" method="post">
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label" style="color: white;">ID</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" name="id">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label" style="color: white;">PW</label>
+                <input
+                    type="password"
+                    class="form-control"
+                    id="formGroupExampleInput2"
+                    name="pw">
+            </div>
+            <div class="mb-3">
+                <input
+                    type="button"
+                    value="Login"
+                    class="form-control"
+                    id="formGroupExampleInput3"
+                    onclick="checklogin()">
+            </div>
+        </form>
+    </body>
+</html>

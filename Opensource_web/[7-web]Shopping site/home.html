@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="./css/home.css" rel="stylesheet" type="text/css">
+        <title>Home</title>
+
+        <script src="js/home.js"></script>
+
+    </head>
+
+    <body>
+        <div class="content">
+            <div>
+                <span>
+                    <a href="login.html" id="main">
+                        <b style="font-size: 30px;">Happy Shopping</b>
+                    </a>
+                </span>
+                <a href="login.html" id="logout">
+                    <b style="font-size: 30px;">Logout</b>
+                </a>
+
+                <ul style="margin: 0px; position: fixed; bottom: 20px; right: 40px;">
+                    <li style="list-style: none; text-align: center;">
+                        <button
+                            class="move-btn"
+                            onclick="location.href ='#main'"
+                            style="background-color: rgb(57, 218, 218); color: red; text-decoration: none;">TOP</button>
+                    </li>
+                    <li style="list-style: none; text-align: center;">
+                        <button
+                            class="move-btn"
+                            onclick="location.href ='#bottom'"
+                            style="background-color: rgb(57, 218, 218); color: red; text-decoration: none;">BOTTOM</button>
+                    </li>
+                </ul>
+
+                <div>
+                    <img src="./img/grocery1.jpeg" alt="grocery" class="img-fluid">
+                </div>
+
+                <nav class="menu">
+                    <ul class="sub-menu" style="list-style: none;">
+                        <li>
+                            <a style="text-decoration: none; color: black;">
+                                <b>BEST</b>
+                            </a>
+                        </li>
+                        <li>
+                            <a style="text-decoration: none; color: black;">
+                                <b>FRUIT</b>
+                            </a>
+                        </li>
+                        <li>
+                            <a style="text-decoration: none; color: black;">
+                                <b>VEGETABLE</b>
+                            </a>
+                        </li>
+                        <li>
+                            <a style="text-decoration: none; color: black;">
+                                <b>DAIRY</b>
+                            </a>
+                        </li>
+                        <li>
+                            <a style="text-decoration: none; color: black;">
+                                <b>CLOTH</b>
+                            </a>
+                        </li>
+                        <li>
+                            <a style="text-decoration: none; color: black;">
+                                <b>ELECTRONIC</b>
+                            </a>
+                        </li>
+                        <li>
+                            <a style="text-decoration: none; color: black;">
+                                <b>BOOK</b>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="container-fluid" style="margin: auto;">
+
+                    <div class="row">
+                        <script>
+                            table();
+                        </script>
+                    </div>
+                    <div style="text-align: center;">
+                        <button
+                            is="buy-btn"
+                            onclick="buy()"
+                            style="width: 855px; height: 40px; background-color: rgb(103, 191, 241); border: 0px;">
+                            <b>BUY</b>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <footer id="bottom">
+                This is WebProgramming Homework
+            </footer>
+        </body>
+    </html>

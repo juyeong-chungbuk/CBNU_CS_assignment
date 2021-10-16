@@ -1,0 +1,11 @@
+form {
+    text-align: left;
+    position: absolute;
+    top: 10%;
+    right: 8%;
+}
+
+input[type="button"]{
+    background-color: rgb(7, 163, 7);
+    border: 0px;
+}
