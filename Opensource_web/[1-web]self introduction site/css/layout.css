@@ -1,0 +1,37 @@
+p {
+    color: blueviolet;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h1 {
+    color: rgb(199, 66, 148);
+    text-decoration: underline overline;
+    text-shadow: 2px 1px 1px;
+}
+
+.table {
+    background-color: azure;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: rgb(235, 214, 255);
+    color: rgb(210, 255, 246);
+    border: solid;
+}
+
+.first {
+    display: flex;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    color: rgb(255, 0, 0);
+}
