@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>task2</title>
+        <script>
+            function show() {
+                var id = document.getElementById("id").value;
+                var pw = document.getElementById("pw").value;
+                alert("ID : " + id + " " + "PW : " + pw);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Login</h1>
+
+        <form>
+            ID: <input type="text" id="id">
+            <br>
+            PW: <input type="password" id="pw">
+            <br>
+            <input type="button" value="Login" onclick="show();">
+        </form>
+    </body>
+</html>
