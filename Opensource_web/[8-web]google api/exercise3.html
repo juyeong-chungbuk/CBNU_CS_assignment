@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise3</title>
+</head>
+<body>
+    <div id="map" style="width:1200px; height: 500px"></div>
+
+    <script>
+        function pinSymbol(color) {
+        return {
+            path: 'M 0,0 C -2,-20 -10,-22 -10,-30 A 10,10 0 1,1 10,-30 C 10,-22 2,-20 0,0 z',
+            fillColor: color,
+            fillOpacity: 1,
+            strokeColor: '#FFF',
+            strokeWeight: 2,
+            scale: 1.5,
+        };
+}
+    function myMap() {  
+      var mapCanvas = document.getElementById("map");
+      var myCenter = new google.maps.LatLng(38.512087998080695, 126.97629259329088);
+
+      var HeungHai = new google.maps.LatLng(36.1251233, 129.3792418);    //4.7
+      var Pohang = new google.maps.LatLng(36.0193129, 129.343269);        //4.7
+      var HeungHai2 = new google.maps.LatLng(36.1251233, 129.3792418);   //5.4
+      var Sungjibaegam = new google.maps.LatLng(41.84278, 129.21167);  //6.3
+      var Hoemulli = new google.maps.LatLng(40.83333, 132.41667);      //5.9
+      var Maebaruchuo = new google.maps.LatLng(33.5572822, 130.1955757); //4.1
+      var Kyonju = new google.maps.LatLng(35.8562025, 129.2246949);        //3.5
+      var Kyonju2 = new google.maps.LatLng(35.8563025, 129.2267949);       //4.6
+      var Kyonju3 = new google.maps.LatLng(35.8564025, 129.2288949);       //5.4
+      var Kyonju4 = new google.maps.LatLng(35.8565025, 129.2379949);       //4.9
+
+      var mapOptions = {
+        center: myCenter, 
+        zoom: 5.5,
+        mapTypeId:google.maps.MapTypeId.SATELLITE
+      };
+      var map = new google.maps.Map(mapCanvas, mapOptions);
+
+        var marker = new google.maps.Marker({ //4.7
+            position:HeungHai,
+            animation:google.maps.Animation.BOUNCE,
+            
+        });
+        marker.setMap(map);
+        var myUniversity = new google.maps.Circle({ //연두
+            center: HeungHai,icon: pinSymbol("#33CC00"),
+            radius: 90000,
+            strokeColor: "#33CC00",
+            strokeOpacity: 0.9,
+            strokeWeight: 2,
+            fillColor: "#339900",
+            fillOpacity: 0.3
+        });
+        myUniversity.setMap(map);
+        var infowindow = new google.maps.InfoWindow({
+            content: "Heung-Hai: 4.7magnitude"
+        });
+        infowindow.open(map,marker);
+
+        var marker2 = new google.maps.Marker({ //4.7
+            position:Pohang,
+            animation:google.maps.Animation.BOUNCE,
+            icon: pinSymbol("#FFFF33")
+        });
+        marker2.setMap(map);
+        var myUniversity2 = new google.maps.Circle({ //노랑
+            center: Pohang,
+            radius: 90000,
+            strokeColor: "#FFFF33",
+            strokeOpacity: 0.9,
+            strokeWeight: 2,
+            fillColor: "#FFFF33",
+            fillOpacity: 0.3
+        });
+        myUniversity2.setMap(map);
+        var infowindow2 = new google.maps.InfoWindow({
+            content: "Pohang: 4.7magnitude"
+        });
+        infowindow2.open(map,marker2);
+
+        var marker3 = new google.maps.Marker({  //5.4
+            position:HeungHai2,
+            animation:google.maps.Animation.BOUNCE,
+            icon: pinSymbol("#FF9933")
+        });
+        marker3.setMap(map);
+        var myUniversity3 = new google.maps.Circle({ //주황
+            center: HeungHai2,
+            radius: 120000,
+            strokeColor: "#FF9933",
+            strokeOpacity: 0.9,
+            strokeWeight: 2,
+            fillColor: "#FF9933",
+            fillOpacity: 0.3
+        });
+        myUniversity3.setMap(map);
+        var infowindow3 = new google.maps.InfoWindow({
+            content: "Heung-Hai: 5.4magnitude"
+        });
+        infowindow3.open(map,marker3);
+
+        var marker4 = new google.maps.Marker({ //6.3
+            position:Sungjibaegam,
+            animation:google.maps.Animation.BOUNCE,
+            icon: pinSymbol("#006600")
+        });
+        marker4.setMap(map);
+        var myUniversity4 = new google.maps.Circle({ //초록
+            center: Sungjibaegam,
+            radius: 160000,
+            strokeColor: "#006600",
+            strokeOpacity: 0.9,
+            strokeWeight: 2,
+            fillColor: "#006600",
+            fillOpacity: 0.3
+        });
+        myUniversity4.setMap(map);
+        var infowindow4 = new google.maps.InfoWindow({
+            content: "Sungjibaegam: 6.3magnitude"
+        });
+        infowindow4.open(map,marker4);
+
+        var marker5 = new google.maps.Marker({ //5.9
+            position:Hoemulli,
+            animation:google.maps.Animation.BOUNCE,
+            icon: pinSymbol("#0066CC")
+        });
+        marker5.setMap(map);
+        var myUniversity5 = new google.maps.Circle({ //파랑
+            center: Hoemulli,
+            radius: 140000,
+            strokeColor: "#0066CC",
+            strokeOpacity: 0.9,
+            strokeWeight: 2,
+            fillColor: "#0066CC",
+            fillOpacity: 0.3
+        });
+        myUniversity5.setMap(map);
+        var infowindow5 = new google.maps.InfoWindow({
+            content: "Hoemul-li: 5.9magnitude"
+        });
+        infowindow5.open(map,marker5);
+
+        var marker6 = new google.maps.Marker({ //4.1
+            position:Maebaruchuo,
+            animation:google.maps.Animation.BOUNCE,
+            icon: pinSymbol("#660099")
+        });
+        marker6.setMap(map);
+        var myUniversity6 = new google.maps.Circle({ //보라
+            center: Maebaruchuo,
+            radius: 70000,
+            strokeColor: "#660099",
+            strokeOpacity: 0.9,
+            strokeWeight: 2,
+            fillColor: "#660099",
+            fillOpacity: 0.3
+        });
+        myUniversity6.setMap(map);
+        var infowindow6 = new google.maps.InfoWindow({
+            content: "Maebaruchuo: 4.1magnitude"
+        });
+        infowindow6.open(map,marker6);
+
+        var marker7 = new google.maps.Marker({ //3.5
+            position:Kyonju,
+            animation:google.maps.Animation.BOUNCE,
+            icon: pinSymbol("#FF3399")
+        });
+        marker7.setMap(map);
+        var myUniversity7 = new google.maps.Circle({ //핑크
+            center: Kyonju,
+            radius: 50000,
+            strokeColor: "#FF3399",
+            strokeOpacity: 0.9,
+            strokeWeight: 2,
+            fillColor: "#FF3399",
+            fillOpacity: 0.3
+        });
+        myUniversity7.setMap(map);
+        var infowindow7 = new google.maps.InfoWindow({
+            content: "Kyonju: 3.5magnitude"
+        });
+        infowindow7.open(map,marker7);
+
+        var marker8 = new google.maps.Marker({ //4.6
+            position:Kyonju2,
+            animation:google.maps.Animation.BOUNCE,
+            icon: pinSymbol("#0099FF")
+        });
+        marker8.setMap(map);
+        var myUniversity8 = new google.maps.Circle({ //하늘
+            center: Kyonju2,
+            radius: 8000,
+            strokeColor: "#0099FF",
+            strokeOpacity: 0.9,
+            strokeWeight: 2,
+            fillColor: "#0099FF",
+            fillOpacity: 0.3
+        });
+        myUniversity8.setMap(map);
+        var infowindow8 = new google.maps.InfoWindow({
+            content: "Kyonju: 4.6magnitude"
+        });
+        infowindow8.open(map,marker8);
+
+        var marker9 = new google.maps.Marker({ //5.4
+            position:Kyonju3,
+            animation:google.maps.Animation.BOUNCE,
+            icon: pinSymbol("#663333")
+        });
+        marker9.setMap(map);
+        var myUniversity9 = new google.maps.Circle({ //갈색
+            center: Kyonju3,
+            radius: 120000,
+            strokeColor: "#663333",
+            strokeOpacity: 0.9,
+            strokeWeight: 2,
+            fillColor: "#663333",
+            fillOpacity: 0.3
+        });
+        myUniversity9.setMap(map);
+        var infowindow9 = new google.maps.InfoWindow({
+            content: "Kyonju: 5.4magnitude"
+        });
+        infowindow9.open(map,marker9);
+
+        var marker10 = new google.maps.Marker({ //4.9
+            position:Kyonju4,
+            animation:google.maps.Animation.BOUNCE,
+            icon: pinSymbol("#FF3333")
+        });
+        marker10.setMap(map);
+        var myUniversity10 = new google.maps.Circle({ //빨강
+            center: Kyonju4,
+            radius: 100000,
+            strokeColor: "#FF3333",
+            strokeOpacity: 0.9,
+            strokeWeight: 2,
+            fillColor: "#FF3333",
+            fillOpacity: 0.3
+        });
+        myUniversity10.setMap(map);
+        var infowindow10 = new google.maps.InfoWindow({
+            content: "Kyonju: 4.9magnitude"
+        });
+        infowindow10.open(map,marker10);
+    }
+    </script>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG_htb8KLimgQvNbngBjYHL-Pv0vZQnUo&callback=myMap"></script>
+</body>
+</html>
