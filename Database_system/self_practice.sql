@@ -43,4 +43,42 @@ WHERE DNO IN (
     	FROM DEPARTMENT
     	WHERE DEPTNAME='영업' OR DEPTNAME='개발');
         
-        
+
+-- strong entity
+EMPLOYEE(Empno, Title, Empname, Salary, City, Ku, Dong)
+DEPARTMENT(Deptno, Depname, Floor)
+PROJECT(Projno, Projname, Budget)
+SUPPLIER(Suppno, Suppname, Credit)
+PART(Partno, Partname, Price)
+
+-- weak entity
+DEPENDENT(Empno, Depname, Sex)
+
+-- 1:1 Cardinality
+PROJECT(Projno, Empno, Projname, Budget, Manager, StartDate)
+
+-- 1:N Cardinality
+DEPENDENT(Depname, Sex, Empno)
+EMPLOYEE(Empno, Title, Empname, Salary, City, Ku, Dong, Dno)
+PART(Partno, Partname, Price, Subpartno)
+
+-- N:M Caldinality
+WORKS_FOR(Empno, Projno, Duration, Responsibility)
+SUPPLIES(Projno, Partno, Quantity)
+
+-- ternary Caldinality
+SUPPLIES(Projno, Partno, Suppno, Quantity)
+
+-- 다치 속성
+PROJ_LOC(Projno, Location)
+
+-- 최종
+EMPLOYEE(Empno, Title, Empname, Salary, City, Ku, Dong, Dno)
+DEPARTMENT(Deptno, Depname, Floor)
+PROJECT(Projno, Empno, Projname, Budget, Manager, StartDate)
+SUPPLIER(Suppno, Suppname, Credit)
+DEPENDENT(Depname, Sex, Empno)
+PART(Partno, Partname, Price, Subpartno)
+WORKS_FOR(Empno, Projno, Duration, Responsibility)
+SUPPLIES(Projno, Partno, Suppno, Quantity)
+PROJ_LOC(Projno, Location)
