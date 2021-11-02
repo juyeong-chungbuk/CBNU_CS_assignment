@@ -43,42 +43,75 @@ WHERE DNO IN (
     	FROM DEPARTMENT
     	WHERE DEPTNAME='영업' OR DEPTNAME='개발');
         
+CREATE TABLE STUDENT(
+STDNO int,
+STDNAME varchar(15),
+STDAGE int
+);
 
--- strong entity
-EMPLOYEE(Empno, Title, Empname, Salary, City, Ku, Dong)
-DEPARTMENT(Deptno, Depname, Floor)
-PROJECT(Projno, Projname, Budget)
-SUPPLIER(Suppno, Suppname, Credit)
-PART(Partno, Partname, Price)
+INSERT INTO STUDENT
+VALUES(1,'신주영',22,'여'),
+(2,'김동용',24,'남'),
+(3,'깜찍이',2,'여');
 
--- weak entity
-DEPENDENT(Empno, Depname, Sex)
+ALTER TABLE STUDENT
+ADD COLUMN STDSEX varchar(5);
 
--- 1:1 Cardinality
-PROJECT(Projno, Empno, Projname, Budget, Manager, StartDate)
+ALTER TABLE STUDENT
+ADD STDNUM INT;
 
--- 1:N Cardinality
-DEPENDENT(Depname, Sex, Empno)
-EMPLOYEE(Empno, Title, Empname, Salary, City, Ku, Dong, Dno)
-PART(Partno, Partname, Price, Subpartno)
+SELECT * FROM STUDENT;
 
--- N:M Caldinality
-WORKS_FOR(Empno, Projno, Duration, Responsibility)
-SUPPLIES(Projno, Partno, Quantity)
+ALTER TABLE STUDENT
+MODIFY STDNUM INT;
 
--- ternary Caldinality
-SUPPLIES(Projno, Partno, Suppno, Quantity)
+ALTER TABLE STUDENT
+CHANGE STDNUMBER STDNUM VARCHAR(15);
 
--- 다치 속성
-PROJ_LOC(Projno, Location)
+ALTER TABLE STUDENT
+DROP COLUMN STDSEX;
 
--- 최종
-EMPLOYEE(Empno, Title, Empname, Salary, City, Ku, Dong, Dno)
-DEPARTMENT(Deptno, Depname, Floor)
-PROJECT(Projno, Empno, Projname, Budget, Manager, StartDate)
-SUPPLIER(Suppno, Suppname, Credit)
-DEPENDENT(Depname, Sex, Empno)
-PART(Partno, Partname, Price, Subpartno)
-WORKS_FOR(Empno, Projno, Duration, Responsibility)
-SUPPLIES(Projno, Partno, Suppno, Quantity)
-PROJ_LOC(Projno, Location)
+TRUNCATE TABLE STUDENT;
+
+ALTER TABLE STUDENT
+MODIFY STDNUM INT NOT NULL;
+
+CREATE TABLE teacher(
+tNO int,
+tNAME varchar(15),
+tAGE int,
+constraint cpk primary key (tNO)
+);
+
+ALTER TABLE TEACHER
+DROP PRIMARY KEY;
+
+USE WORLD;
+
+/*a. Return all the attributes for cities using two conditions: the city’s first letter 
+starts with ‘L’ (like London), and the city has over 1 million populations*/
+SELECT *
+FROM city
+WHERE NAME LIKE 'L%' AND Population > 1000000;
+
+/*b. Count the number of languages in the world.*/
+SELECT Language, COUNT(Language)
+FROM countrylanguage
+GROUP BY Language;
+
+SELECT COUNT(*)
+FROM countrylanguage;
+
+/*c. Which countries speak both Chinese and English?*/
+SELECT Name
+FROM country
+WHERE Code IN (
+SELECT c1.CountryCode
+FROM countrylanguage AS c1 JOIN countrylanguage AS c2
+ON c1.CountryCode=c2.CountryCode AND c1.language = 'English'
+WHERE c2.Language = 'Chinese');
+
+SELECT c1.CountryCode, c1.Language, c2.Language
+FROM countrylanguage AS c1 JOIN countrylanguage AS c2
+ON c1.CountryCode=c2.CountryCode AND c1.language = 'English'
+WHERE c2.Language = 'Chinese';
