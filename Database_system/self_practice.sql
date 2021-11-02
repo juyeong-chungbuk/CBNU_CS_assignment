@@ -108,10 +108,51 @@ FROM country
 WHERE Code IN (
 SELECT c1.CountryCode
 FROM countrylanguage AS c1 JOIN countrylanguage AS c2
-ON c1.CountryCode=c2.CountryCode AND c1.language = 'English'
-WHERE c2.Language = 'Chinese');
+ON c1.CountryCode=c2.CountryCode
+WHERE c2.Language = 'Chinese' AND c1.language = 'English');
 
 SELECT c1.CountryCode, c1.Language, c2.Language
 FROM countrylanguage AS c1 JOIN countrylanguage AS c2
 ON c1.CountryCode=c2.CountryCode AND c1.language = 'English'
 WHERE c2.Language = 'Chinese';
+
+SELECT Name
+FROM country
+WHERE Code IN (
+SELECT c1.CountryCode
+FROM countrylanguage c1,  countrylanguage c2
+WHERE c1.CountryCode = c2.CountryCode 
+AND (c1.language = 'English' 
+AND c2.Language = 'Chinese'));
+
+-- step 1.
+AIRPORT(Airport_code, City, State, Name)
+AIRPLANE_TYPE(Type_name, Max_seats, Company)
+AIRPLANE(Airplane_id, Total_no_of_seats)
+FLIGHT(Number, Airline, Weekdays)
+-- step 2.
+FLIGHT_LEG(Airport_code, Number, Leg_no)
+FARE(Number, Code, Amount, Restrictions)
+LEG_INSTANCE(Airplane_code, Airplane_id, Date, No_of_avail_seats)
+
+-- step 3.
+X
+-- step 4.
+FLIGHT_LEG(Airport_code, Number, Leg_no)
+FARE(Number, Code, Amount, Restrictions)
+AIRPLANE(Airplane_id, Total_no_of_seats, Type_name)
+-- step 5.
+CAN_LAND(Airport_code, Type_name)
+-- step 6.
+X
+-- step 7.
+X
+-- 최졸 스키마
+AIRPORT(Airport_code, City, State, Name)
+AIRPLANE_TYPE(Type_name, Max_seats, Company)
+AIRPLANE(Airplane_id, Total_no_of_seats)
+FLIGHT(Number, Airline, Weekdays)
+FLIGHT_LEG(Airport_code, Number, Leg_no)
+FARE(Number, Code, Amount, Restrictions)
+LEG_INSTANCE(Airplane_code, Airplane_id, Date, No_of_avail_seats)
+CAN_LAND(Airport_code, Type_name)
