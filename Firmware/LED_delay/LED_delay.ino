@@ -1,4 +1,4 @@
-#define LED 2
+#define LED 9
 
 void setup(){
   pinMode(LED, OUTPUT);
@@ -6,7 +6,7 @@ void setup(){
 
 void loop(){
   digitalWrite(LED, HIGH);
-  delay(3000);
+  delay(300);
   digitalWrite(LED, LOW);
-  delay(7000);
+  delay(700);
 }
