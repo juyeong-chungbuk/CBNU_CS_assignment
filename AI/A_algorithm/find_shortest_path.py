@@ -76,7 +76,6 @@ def astar(array, start, goal):  # 인자로 맵, 시작좌표, 목적지 좌표�
             while current in came_from:  # 목적지에서 역순으로 경로를 추출한다
                 data.append(current) # 역순으로 가면서 현재 위치를 data에 저장
                 current = came_from[current] # 현재위치를 새로고침해줌
-
             return data # 역순 경로
 
         close_set.add(current)  # current 위치를 탐색이 종료된 set에 저장
